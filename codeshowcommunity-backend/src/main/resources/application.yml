@@ -1,0 +1,25 @@
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: codeshowcommunity
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 123456
+
+knife4j:
+  enable: true
+  openapi:
+    title: codeshowcommunity
+    group:
+      default:
+        group-name: default
+        api-rule: package
+        api-rule-resources:
+          - com.cheems.codeshowcommunitybackend.controller
